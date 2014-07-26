@@ -1,8 +1,8 @@
 <?php
 namespace Egoi;
 
-use Egoi\Api;
 use Egoi\Protocol;
+use Egoi\Api;
 use Egoi\Api\RestImpl;
 use Egoi\Api\SoapImpl;
 use Egoi\Api\XmlRpcImpl;
