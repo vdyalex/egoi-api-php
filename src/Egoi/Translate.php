@@ -1,6 +1,9 @@
 <?php
+namespace Egoi;
 
-class EgoiTranslate
+use Egoi\Egoi;
+
+class Translate
 {
 	const SUBSCRIBER_UNCONFIRMED    	= 0;
 	const SUBSCRIBER_ACTIVE         	= 1;
@@ -15,8 +18,8 @@ class EgoiTranslate
 	const STATUS_TYPE_SUCCESS			= 1;
 	const STATUS_TYPE_WARNING			= 2;
 	
-	const LANG_BR = 'br';
 	const LANG_EN = 'en';
+	const LANG_BR = 'br';
 	
 	public static $status = array(
 		'CANNOT_BE_DELETED' => array(
@@ -193,11 +196,12 @@ class EgoiTranslate
 	{
 		if(array_key_exists($message_id, self::$status))
 		{
-			if(array_key_exists(Egoi::getLanguage(), self::$status['message']))
+			if(array_key_exists(Egoi::getLanguage(), self::$status[$message_id]['message']))
 			{
-				return self::$status[$message_id][Egoi::getLanguage()];
+				return self::$status[$message_id]['message'][Egoi::getLanguage()];
 			}
 		}
 		
 		return $message_id;
 	}
+}

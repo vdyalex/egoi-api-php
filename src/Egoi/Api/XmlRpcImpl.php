@@ -1,4 +1,6 @@
 <?php
+namespace Egoi\Api;
+
 if (!defined("EgoiApiXmlRpcImpl")) {
 	define("EgoiApiXmlRpcImpl",0);
 

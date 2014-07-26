@@ -1,4 +1,9 @@
 <?php
+namespace Egoi;
+
+use Egoi\Translate;
+use Egoi\Api;
+
 class Egoi {
 
 	public static $protocol = null;
@@ -10,7 +15,7 @@ class Egoi {
 	{
 		self::$protocol = $protocol;
 		
-		return EgoiApiFactory::getApi($protocol);
+		return Factory::getApi($protocol);
 	}
 	
 	public static function getApiKey()

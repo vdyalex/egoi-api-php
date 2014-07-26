@@ -1,4 +1,6 @@
 <?php
+namespace Egoi\Api;
+
 if (!defined("EgoiApiSoapImpl")) {
 	define("EgoiApiSoapImpl",0);
 

@@ -1,26 +1,23 @@
 <?php
-if (!defined("EgoiApiFactory")) {
-	define("EgoiApiFactory",0);
-	
-	require_once "Api.php";
-	require_once "RestImpl.php";
-	require_once "SoapImpl.php";
-	require_once "XmlRpcImpl.php";
-	
-	abstract class EgoiApiFactory {
-	
-		function getApi($protocol) {
-			switch($protocol) {
-				case Protocol::Rest:
-					return new EgoiApiRestImpl();
-				case Protocol::Soap;
-					return new EgoiApiSoapImpl();
-				case Protocol::XmlRpc:
-					return new EgoiApiXmlRpcImpl();
-			}
-		}
-	
-	}
-	
+namespace Egoi;
+
+use Egoi\Api;
+use Egoi\Protocol;
+use Egoi\Api\RestImpl;
+use Egoi\Api\SoapImpl;
+use Egoi\Api\XmlRpcImpl;
+
+abstract class Factory {
+
+    function getApi($protocol) {
+        switch($protocol) {
+            case Protocol::Rest:
+                return new RestImpl();
+            case Protocol::Soap;
+                return new SoapImpl();
+            case Protocol::XmlRpc:
+                return new XmlRpcImpl();
+        }
+    }
+
 }
-?>
