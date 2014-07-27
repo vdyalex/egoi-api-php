@@ -1,6 +1,6 @@
 {
     "name": "alexndreazevedo/egoi-api-php",
-    "description": "PHP API for integrates E-goi multichannel marketing automation",
+    "description": "Optimized PHP API of E-goi",
     "keywords": ["alexndreazevedo", "e-goi", "marketing", "mailing", "sms", "voice", "social", "media", "campaigns"],
     "type": "library",
     "homepage": "https://github.com/alexndreazevedo/egoi-api-php",
