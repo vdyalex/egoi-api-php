@@ -138,7 +138,7 @@ class Translate
 			'status' => self::STATUS_TYPE_WARNING,
 			'message' => array(
 				self::LANG_EN => '',
-				self::LANG_BR => 'Endereço de e-mail inválido ou inexistente.',
+				self::LANG_BR => 'Endereço de e-mail inexistente.',
 			),
 		),
 		'EMAIL_ALREADY_EXISTS' => array(
