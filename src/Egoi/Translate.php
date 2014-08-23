@@ -18,12 +18,20 @@ class Translate
 	const STATUS_TYPE_SUCCESS			= 1;
 	const STATUS_TYPE_WARNING			= 2;
 	
+	const TYPE_GENERAL					= 1;
+	const TYPE_ACCESS					= 2;
+	const TYPE_LIST						= 3;
+	const TYPE_SUBSCRIBER				= 4;
+	const TYPE_EMAIL					= 5;
+	const TYPE_PHONE					= 6;
+	
 	const LANG_EN = 'en';
 	const LANG_BR = 'br';
 	
 	public static $status = array(
 		'CANNOT_BE_DELETED' => array(
 			'status' => self::STATUS_TYPE_WARNING,
+			'type' => self::TYPE_GENERAL,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Impossível remover este item.',
@@ -31,6 +39,7 @@ class Translate
 		),
 		'ALREADY_DELETED' => array(
 			'status' => self::STATUS_TYPE_SUCCESS,
+			'type' => self::TYPE_GENERAL,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'O assinante já foi removido.',
@@ -38,6 +47,7 @@ class Translate
 		),
 		'LIST_NOT_FOUND' => array(
 			'status' => self::STATUS_TYPE_WARNING,
+			'type' => self::TYPE_LIST,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Lista não encontrada. Entre em contato com o administrador.',
@@ -45,6 +55,7 @@ class Translate
 		),
 		'LIST_MISSING' => array(
 			'status' => self::STATUS_TYPE_WARNING,
+			'type' => self::TYPE_LIST,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Lista não encontrada. Entre em contato com o administrador.',
@@ -52,6 +63,7 @@ class Translate
 		),
 		'NO_MORE_LISTS_ALLOWED' => array(
 			'status' => self::STATUS_TYPE_ERROR,
+			'type' => self::TYPE_LIST,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Limite de listas excedido. Entre em contato com o administrador.',
@@ -59,6 +71,7 @@ class Translate
 		),
 		'NO_ACCESS' => array(
 			'status' => self::STATUS_TYPE_ERROR,
+			'type' => self::TYPE_ACCESS,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Acesso não permitido. Entre em contato com o administrador.',
@@ -66,6 +79,7 @@ class Translate
 		),
 		'NO_USERNAME_AND_PASSWORD' => array(
 			'status' => self::STATUS_TYPE_ERROR,
+			'type' => self::TYPE_ACCESS,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Acesso não permitido. Entre em contato com o administrador.',
@@ -73,6 +87,7 @@ class Translate
 		),
 		'NO_USERNAME' => array(
 			'status' => self::STATUS_TYPE_ERROR,
+			'type' => self::TYPE_ACCESS,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Acesso não permitido. Entre em contato com o administrador.',
@@ -80,6 +95,7 @@ class Translate
 		),
 		'NO_PASSWORD' => array(
 			'status' => self::STATUS_TYPE_ERROR,
+			'type' => self::TYPE_ACCESS,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Acesso nao permitido. Entre em contato com o administrador.',
@@ -87,6 +103,7 @@ class Translate
 		),
 		'EMAIL_REQUIRED' => array(
 			'status' => self::STATUS_TYPE_WARNING,
+			'type' => self::TYPE_EMAIL,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'O preenchimento do campo de e-mail é obrigatório.',
@@ -94,6 +111,7 @@ class Translate
 		),
 		'SUBSCRIBER_MISSING' => array(
 			'status' => self::STATUS_TYPE_WARNING,
+			'type' => self::TYPE_SUBSCRIBER,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Assinante não encontrado.',
@@ -101,6 +119,7 @@ class Translate
 		),
 		'NO_SUBSCRIBERS' => array(
 			'status' => self::STATUS_TYPE_WARNING,
+			'type' => self::TYPE_SUBSCRIBER,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Lista sem assinantes.',
@@ -108,6 +127,7 @@ class Translate
 		),
 		'CANNOT_ADD_MORE_SUBSCRIBERS' => array(
 			'status' => self::STATUS_TYPE_ERROR,
+			'type' => self::TYPE_SUBSCRIBER,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Não é permitido adicionar mais assinantes a esta lista. Entre em contato com o administrador.',
@@ -115,6 +135,7 @@ class Translate
 		),
 		'SUBSCRIBER_DATA_CANNOT_BE_EDITED' => array(
 			'status' => self::STATUS_TYPE_WARNING,
+			'type' => self::TYPE_SUBSCRIBER,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Não é permitido alterar os dados deste assinante.',
@@ -122,6 +143,7 @@ class Translate
 		),
 		'SUBSCRIBER_ALREADY_REMOVED' => array(
 			'status' => self::STATUS_TYPE_SUCCESS,
+			'type' => self::TYPE_SUBSCRIBER,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Assinante removido com sucesso!',
@@ -129,6 +151,7 @@ class Translate
 		),
 		'SUBSCRIBER_NOT_FOUND' => array(
 			'status' => self::STATUS_TYPE_WARNING,
+			'type' => self::TYPE_SUBSCRIBER,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Assinante não encontrado.',
@@ -136,6 +159,7 @@ class Translate
 		),
 		'EMAIL_ADDRESS_INVALID_DOESNT_EXIST' => array(
 			'status' => self::STATUS_TYPE_WARNING,
+			'type' => self::TYPE_EMAIL,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Endereço de e-mail inexistente.',
@@ -143,6 +167,7 @@ class Translate
 		),
 		'EMAIL_ALREADY_EXISTS' => array(
 			'status' => self::STATUS_TYPE_WARNING,
+			'type' => self::TYPE_EMAIL,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Endereço de e-mail já cadastrado.',
@@ -150,6 +175,7 @@ class Translate
 		),
 		'EMAIL_ADDRESS_INVALID' => array(
 			'status' => self::STATUS_TYPE_WARNING,
+			'type' => self::TYPE_EMAIL,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Endereço de e-mail inválido. Preencha os dados corretamente.',
@@ -157,6 +183,7 @@ class Translate
 		),
 		'TELEPHONE_ALREADY_EXISTS' => array(
 			'status' => self::STATUS_TYPE_WARNING,
+			'type' => self::TYPE_PHONE,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Telefone já cadastrado.',
@@ -164,6 +191,7 @@ class Translate
 		),
 		'TELEPHONE_REQUIRED' => array(
 			'status' => self::STATUS_TYPE_WARNING,
+			'type' => self::TYPE_PHONE,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'O preenchimento do campo de telefone é obrigatório.',
@@ -171,6 +199,7 @@ class Translate
 		),
 		'NO_CELLPHONE_OR_TELEPHONE' => array(
 			'status' => self::STATUS_TYPE_WARNING,
+			'type' => self::TYPE_PHONE,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Preencha o telefone corretamente.',
@@ -178,6 +207,7 @@ class Translate
 		),
 		'FAX_ALREADY_EXISTS' => array(
 			'status' => self::STATUS_TYPE_WARNING,
+			'type' => self::TYPE_PHONE,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Fax já cadastrado.',
@@ -185,6 +215,7 @@ class Translate
 		),
 		'FAX_REQUIRED' => array(
 			'status' => self::STATUS_TYPE_WARNING,
+			'type' => self::TYPE_PHONE,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'O preenchimento do campo de fax é obrigatório.',
@@ -192,6 +223,7 @@ class Translate
 		),
 		'NO_DATA_TO_INSERT' => array(
 			'status' => self::STATUS_TYPE_WARNING,
+			'type' => self::TYPE_GENERAL,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Preencha os dados corretamente.',
@@ -199,6 +231,7 @@ class Translate
 		),
 		'INTERNAL_ERROR' => array(
 			'status' => self::STATUS_TYPE_ERROR,
+			'type' => self::TYPE_GENERAL,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Ocorreu um erro ao processar.',
@@ -206,6 +239,7 @@ class Translate
 		),
 		'ERROR' => array(
 			'status' => self::STATUS_TYPE_ERROR,
+			'type' => self::TYPE_GENERAL,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Ocorreu um erro ao processar.',
@@ -213,6 +247,7 @@ class Translate
 		),
 		'WARNING' => array(
 			'status' => self::STATUS_TYPE_WARNING,
+			'type' => self::TYPE_GENERAL,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Ocorreu uma falha ao processar.',
@@ -220,6 +255,7 @@ class Translate
 		),
 		'SUCCESS' => array(
 			'status' => self::STATUS_TYPE_SUCCESS,
+			'type' => self::TYPE_GENERAL,
 			'message' => array(
 				self::LANG_EN => '',
 				self::LANG_BR => 'Assinante cadastrado com sucesso!',
