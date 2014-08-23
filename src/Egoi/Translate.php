@@ -290,7 +290,7 @@ class Translate
 
 	public static function getTranslation($status_id)
 	{
-		if(array_key_exists($status_id, self::$status))
+		if(key_exists($status_id, self::$status))
 		{
 			if(array_key_exists(Egoi::getLanguage(), self::$status[$status_id]['message']))
 			{
@@ -298,7 +298,7 @@ class Translate
 			}
 		}
 
-		return $message_id;
+		return $status_id;
 	}
 
 	public static function getType($status_id)
