@@ -155,11 +155,46 @@ class Translate
 				self::LANG_BR => 'Endereço de e-mail inválido. Preencha os dados corretamente.',
 			),
 		),
+		'TELEPHONE_ALREADY_EXISTS' => array(
+			'status' => self::STATUS_TYPE_WARNING,
+			'message' => array(
+				self::LANG_EN => '',
+				self::LANG_BR => 'Telefone já cadastrado.',
+			),
+		),
+		'TELEPHONE_REQUIRED' => array(
+			'status' => self::STATUS_TYPE_WARNING,
+			'message' => array(
+				self::LANG_EN => '',
+				self::LANG_BR => 'O preenchimento do campo de telefone é obrigatório.',
+			),
+		),
+		'NO_CELLPHONE_OR_TELEPHONE' => array(
+			'status' => self::STATUS_TYPE_WARNING,
+			'message' => array(
+				self::LANG_EN => '',
+				self::LANG_BR => 'Preencha o telefone corretamente.',
+			),
+		),
+		'FAX_ALREADY_EXISTS' => array(
+			'status' => self::STATUS_TYPE_WARNING,
+			'message' => array(
+				self::LANG_EN => '',
+				self::LANG_BR => 'Fax já cadastrado.',
+			),
+		),
+		'FAX_REQUIRED' => array(
+			'status' => self::STATUS_TYPE_WARNING,
+			'message' => array(
+				self::LANG_EN => '',
+				self::LANG_BR => 'O preenchimento do campo de fax é obrigatório.',
+			),
+		),
 		'NO_DATA_TO_INSERT' => array(
 			'status' => self::STATUS_TYPE_WARNING,
 			'message' => array(
 				self::LANG_EN => '',
-				self::LANG_BR => 'Preencha o email corretamente.',
+				self::LANG_BR => 'Preencha os dados corretamente.',
 			),
 		),
 		'INTERNAL_ERROR' => array(
