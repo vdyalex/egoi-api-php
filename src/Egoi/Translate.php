@@ -24,6 +24,15 @@ class Translate
 	const TYPE_SUBSCRIBER				= 4;
 	const TYPE_EMAIL					= 5;
 	const TYPE_PHONE					= 6;
+
+    public static $types                = array(
+        self::TYPE_GENERAL      => 'general',
+        self::TYPE_ACCESS       => 'access',
+        self::TYPE_LIST         => 'list',
+        self::TYPE_SUBSCRIBER   => 'subscriber',
+        self::TYPE_EMAIL        => 'email',
+        self::TYPE_PHONE        => 'phone',
+    );
 	
 	const LANG_EN = 'en';
 	const LANG_BR = 'br';
@@ -106,7 +115,7 @@ class Translate
 			'type' => self::TYPE_EMAIL,
 			'message' => array(
 				self::LANG_EN => '',
-				self::LANG_BR => 'O preenchimento do campo de e-mail é obrigatório.',
+				self::LANG_BR => 'O preenchimento do e-mail é obrigatório.',
 			),
 		),
 		'SUBSCRIBER_MISSING' => array(
@@ -194,7 +203,23 @@ class Translate
 			'type' => self::TYPE_PHONE,
 			'message' => array(
 				self::LANG_EN => '',
-				self::LANG_BR => 'O preenchimento do campo de telefone é obrigatório.',
+				self::LANG_BR => 'O preenchimento do telefone é obrigatório.',
+			),
+		),
+		'CELLPHONE_ALREADY_EXISTS' => array(
+			'status' => self::STATUS_TYPE_WARNING,
+			'type' => self::TYPE_PHONE,
+			'message' => array(
+				self::LANG_EN => '',
+				self::LANG_BR => 'Celular já cadastrado.',
+			),
+		),
+		'CELLPHONE_REQUIRED' => array(
+			'status' => self::STATUS_TYPE_WARNING,
+			'type' => self::TYPE_PHONE,
+			'message' => array(
+				self::LANG_EN => '',
+				self::LANG_BR => 'O preenchimento do celular é obrigatório.',
 			),
 		),
 		'NO_CELLPHONE_OR_TELEPHONE' => array(
@@ -218,7 +243,7 @@ class Translate
 			'type' => self::TYPE_PHONE,
 			'message' => array(
 				self::LANG_EN => '',
-				self::LANG_BR => 'O preenchimento do campo de fax é obrigatório.',
+				self::LANG_BR => 'O preenchimento do fax é obrigatório.',
 			),
 		),
 		'NO_DATA_TO_INSERT' => array(
@@ -262,17 +287,27 @@ class Translate
 			),
 		),
 	);
-	
-	public static function translate($message_id)
+
+	public static function getTranslation($status_id)
 	{
-		if(array_key_exists($message_id, self::$status))
+		if(array_key_exists($status_id, self::$status))
 		{
-			if(array_key_exists(Egoi::getLanguage(), self::$status[$message_id]['message']))
+			if(array_key_exists(Egoi::getLanguage(), self::$status[$status_id]['message']))
 			{
-				return self::$status[$message_id]['message'][Egoi::getLanguage()];
+				return self::$status[$status_id]['message'][Egoi::getLanguage()];
 			}
 		}
-		
+
 		return $message_id;
+	}
+
+	public static function getType($status_id)
+	{
+		if(array_key_exists($status_id, self::$status))
+		{
+            return self::$types[self::$status[$status_id]['type']];
+		}
+
+		return $status_id;
 	}
 }
