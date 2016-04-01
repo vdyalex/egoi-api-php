@@ -1,5 +1,5 @@
 {
-    "name": "isaquealves/egoi-api-php",
+    "name": "ivopereira/egoi-api-php",
     "description": "Optimized PHP API of E-goi",
     "keywords": ["alexndreazevedo", "e-goi", "marketing", "mailing", "sms", "voice", "social", "media", "campaigns"],
     "type": "library",
@@ -13,6 +13,10 @@
         {
             "name": "Isaque Alves",
             "email": "isaquealves@gmail.com"
+        },
+        {
+            "name": "Ivo Pereira",
+            "email": "ivo-pereira@msn.com"
         }
     ],
     "require": {
