@@ -128,6 +128,12 @@ class SoapImpl extends Api {
     }
 
 
+    function getExtraFields($map) {
+        $fn = __FUNCTION__;
+        return $this->rpc->$fn($map);
+    }
+
+
     function getLists($map) {
         $fn = __FUNCTION__;
         return $this->rpc->$fn($map);
