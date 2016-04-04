@@ -86,6 +86,12 @@ class SoapImpl extends Api {
     }
 
 
+    function deleteList($map) {
+        $fn = __FUNCTION__;
+        return $this->rpc->$fn($map);
+    }
+
+
     function deleteSegment($map) {
         $fn = __FUNCTION__;
         return $this->rpc->$fn($map);
