@@ -108,6 +108,11 @@ class XmlRpcImpl extends Api {
     }
 
 
+    function getExtraFields($map) {
+        return $this->rpc->call(__FUNCTION__, array($map));
+    }
+
+
     function getLists($map) {
         return $this->rpc->call(__FUNCTION__, array($map));
     }
