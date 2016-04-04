@@ -116,6 +116,11 @@ class RestImpl extends Api {
     }
 
 
+    function deleteExtraField($map) {
+        return $this->call(__FUNCTION__, $map);
+    }
+
+
     function deleteSegment($map) {
         return $this->call(__FUNCTION__, $map);
     }

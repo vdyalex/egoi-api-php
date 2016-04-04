@@ -68,6 +68,11 @@ class XmlRpcImpl extends Api {
     }
 
 
+    function deleteExtraField($map) {
+        return $this->rpc->call(__FUNCTION__, array($map));
+    }
+
+
     function deleteSegment($map) {
         return $this->rpc->call(__FUNCTION__, array($map));
     }
