@@ -156,6 +156,11 @@ class RestImpl extends Api {
     }
 
 
+    function getExtraFields($map) {
+        return $this->call(__FUNCTION__, $map);
+    }
+
+
     function getLists($map) {
         return $this->call(__FUNCTION__, $map);
     }
