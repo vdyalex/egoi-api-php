@@ -61,7 +61,13 @@ class RestImpl extends Api {
         return $map;
     }
 
+
     function addExtraField($map) {
+        return $this->call(__FUNCTION__, $map);
+    }
+
+
+    function addSegment($map) {
         return $this->call(__FUNCTION__, $map);
     }
 
@@ -72,6 +78,11 @@ class RestImpl extends Api {
 
 
     function addSubscriberBulk($map) {
+        return $this->call(__FUNCTION__, $map);
+    }
+
+
+    function addTag($map) {
         return $this->call(__FUNCTION__, $map);
     }
 

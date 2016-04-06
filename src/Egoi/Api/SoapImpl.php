@@ -14,7 +14,14 @@ class SoapImpl extends Api {
         $this->rpc = new Client(SoapUrl);
     }
 
+
     function addExtraField($map) {
+        $fn = __FUNCTION__;
+        return $this->rpc->$fn($map);
+    }
+
+
+    function addSegment($map) {
         $fn = __FUNCTION__;
         return $this->rpc->$fn($map);
     }
@@ -27,6 +34,12 @@ class SoapImpl extends Api {
 
 
     function addSubscriberBulk($map) {
+        $fn = __FUNCTION__;
+        return $this->rpc->$fn($map);
+    }
+
+
+    function addTag($map) {
         $fn = __FUNCTION__;
         return $this->rpc->$fn($map);
     }

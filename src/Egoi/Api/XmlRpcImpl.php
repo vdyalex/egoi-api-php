@@ -14,9 +14,16 @@ class XmlRpcImpl extends Api {
         $this->rpc = new Client(XmlRpcUrl);
     }
 
+
     function addExtraField($map) {
         return $this->rpc->call(__FUNCTION__, array($map));
     }
+
+
+    function addSegment($map) {
+        return $this->rpc->call(__FUNCTION__, array($map));
+    }
+
 
     function addSubscriber($map) {
         return $this->rpc->call(__FUNCTION__, array($map));
@@ -24,6 +31,11 @@ class XmlRpcImpl extends Api {
 
 
     function addSubscriberBulk($map) {
+        return $this->rpc->call(__FUNCTION__, array($map));
+    }
+
+
+    function addTag($map) {
         return $this->rpc->call(__FUNCTION__, array($map));
     }
 
