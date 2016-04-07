@@ -202,6 +202,11 @@ class RestImpl extends Api {
     }
 
 
+    function getTags($map) {
+        return $this->call(__FUNCTION__, $map);
+    }
+
+
     function getUserData($map) {
         return $this->call(__FUNCTION__, $map);
     }

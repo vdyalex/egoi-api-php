@@ -1,11 +1,16 @@
 {
     "name": "ivopereira/egoi-api-php",
     "description": "Optimized PHP API of E-goi",
-    "keywords": ["alexndreazevedo", "e-goi", "marketing", "mailing", "sms", "voice", "social", "media", "campaigns"],
+    "keywords": ["ivopereira", "alexndreazevedo", "e-goi", "marketing", "mailing", "sms", "voice", "social", "media", "campaigns", "api"],
     "type": "library",
-    "homepage": "https://github.com/alexndreazevedo/egoi-api-php",
+    "homepage": "https://github.com/IvoPereira/egoi-api-php",
     "license": "Apache2",
     "authors": [
+        {
+            "name": "Ivo Pereira",
+            "email": "ivo-pereira@msn.com",
+            "homepage": "http://www.ivopereira.pt"
+        },
         {
             "name": "Alexandre Azevedo",
             "homepage": "https://github.com/alexndreazevedo/egoi-api-php/contributors"
@@ -13,20 +18,16 @@
         {
             "name": "Isaque Alves",
             "email": "isaquealves@gmail.com"
-        },
-        {
-            "name": "Ivo Pereira",
-            "email": "ivo-pereira@msn.com"
         }
     ],
     "require": {
         "php": ">=5.3.0",
         "ext-curl": "*",
         "ext-json": "*",
-		"zendframework/zend-json": "2.5.*@dev",
-		"zendframework/zendrest": "*",
-		"zendframework/zend-soap": "2.5.*@dev",
-		"zendframework/zend-xmlrpc": "2.5.*@dev"
+    		"zendframework/zend-json": "2.5.*@dev",
+    		"zendframework/zendrest": "*",
+    		"zendframework/zend-soap": "2.5.*@dev",
+    		"zendframework/zend-xmlrpc": "2.5.*@dev"
     },
     "autoload": {
         "classmap": ["src"],

@@ -183,6 +183,12 @@ class SoapImpl extends Api {
     }
 
 
+    function getTags($map) {
+        $fn = __FUNCTION__;
+        return $this->rpc->$fn($map);
+    }
+
+
     function getUserData($map) {
         $fn = __FUNCTION__;
         return $this->rpc->$fn($map);
