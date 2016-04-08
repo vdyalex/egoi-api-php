@@ -95,6 +95,11 @@ class XmlRpcImpl extends Api {
     }
 
 
+    function deleteTag($map) {
+        return $this->rpc->call(__FUNCTION__, array($map));
+    }
+
+
     function editCampaignEmail($map) {
         return $this->rpc->call(__FUNCTION__, array($map));
     }
