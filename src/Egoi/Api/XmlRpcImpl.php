@@ -40,6 +40,11 @@ class XmlRpcImpl extends Api {
     }
 
 
+    function attachTag($map) {
+        return $this->rpc->call(__FUNCTION__, array($map));
+    }
+
+
     function checklogin($map) {
         return $this->rpc->call(__FUNCTION__, array($map));
     }

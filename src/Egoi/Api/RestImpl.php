@@ -87,6 +87,11 @@ class RestImpl extends Api {
     }
 
 
+    function attachTag($map) {
+        return $this->call(__FUNCTION__, $map);
+    }
+
+
     function checklogin($map) {
         return $this->call(__FUNCTION__, $map);
     }
