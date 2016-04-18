@@ -124,6 +124,12 @@ class SoapImpl extends Api {
     }
 
 
+    function detachTag($map) {
+        $fn = __FUNCTION__;
+        return $this->rpc->$fn($map);
+    }
+
+
     function editCampaignEmail($map) {
         $fn = __FUNCTION__;
         return $this->rpc->$fn($map);

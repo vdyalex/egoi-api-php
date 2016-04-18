@@ -152,6 +152,11 @@ class RestImpl extends Api {
     }
 
 
+    function detachTag($map) {
+        return $this->call(__FUNCTION__, $map);
+    }
+
+
     function editCampaignEmail($map) {
         return $this->call(__FUNCTION__, $map);
     }
