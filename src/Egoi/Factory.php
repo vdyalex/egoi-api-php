@@ -9,7 +9,7 @@ use Egoi\Api\XmlRpcImpl;
 
 abstract class Factory {
 
-    function getApi($protocol) {
+    static function getApi($protocol) {
         switch($protocol) {
             case Protocol::Rest:
                 return new RestImpl();
