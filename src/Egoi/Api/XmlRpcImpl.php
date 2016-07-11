@@ -14,9 +14,16 @@ class XmlRpcImpl extends Api {
         $this->rpc = new Client(XmlRpcUrl);
     }
 
+
     function addExtraField($map) {
         return $this->rpc->call(__FUNCTION__, array($map));
     }
+
+
+    function addSegment($map) {
+        return $this->rpc->call(__FUNCTION__, array($map));
+    }
+
 
     function addSubscriber($map) {
         return $this->rpc->call(__FUNCTION__, array($map));
@@ -24,6 +31,16 @@ class XmlRpcImpl extends Api {
 
 
     function addSubscriberBulk($map) {
+        return $this->rpc->call(__FUNCTION__, array($map));
+    }
+
+
+    function addTag($map) {
+        return $this->rpc->call(__FUNCTION__, array($map));
+    }
+
+
+    function attachTag($map) {
         return $this->rpc->call(__FUNCTION__, array($map));
     }
 
@@ -68,7 +85,27 @@ class XmlRpcImpl extends Api {
     }
 
 
+    function deleteExtraField($map) {
+        return $this->rpc->call(__FUNCTION__, array($map));
+    }
+
+
+    function deleteList($map) {
+        return $this->rpc->call(__FUNCTION__, array($map));
+    }
+
+
     function deleteSegment($map) {
+        return $this->rpc->call(__FUNCTION__, array($map));
+    }
+
+
+    function deleteTag($map) {
+        return $this->rpc->call(__FUNCTION__, array($map));
+    }
+
+
+    function detachTag($map) {
         return $this->rpc->call(__FUNCTION__, array($map));
     }
 
@@ -108,6 +145,11 @@ class XmlRpcImpl extends Api {
     }
 
 
+    function getExtraFields($map) {
+        return $this->rpc->call(__FUNCTION__, array($map));
+    }
+
+
     function getLists($map) {
         return $this->rpc->call(__FUNCTION__, array($map));
     }
@@ -124,6 +166,11 @@ class XmlRpcImpl extends Api {
 
 
     function getSenders($map) {
+        return $this->rpc->call(__FUNCTION__, array($map));
+    }
+
+
+    function getTags($map) {
         return $this->rpc->call(__FUNCTION__, array($map));
     }
 

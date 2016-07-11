@@ -14,7 +14,14 @@ class SoapImpl extends Api {
         $this->rpc = new Client(SoapUrl);
     }
 
+
     function addExtraField($map) {
+        $fn = __FUNCTION__;
+        return $this->rpc->$fn($map);
+    }
+
+
+    function addSegment($map) {
         $fn = __FUNCTION__;
         return $this->rpc->$fn($map);
     }
@@ -27,6 +34,19 @@ class SoapImpl extends Api {
 
 
     function addSubscriberBulk($map) {
+        $fn = __FUNCTION__;
+        return $this->rpc->$fn($map);
+    }
+
+
+    function addTag($map) {
+        $fn = __FUNCTION__;
+        return $this->rpc->$fn($map);
+    }
+    }
+
+
+    function attachTag($map) {
         $fn = __FUNCTION__;
         return $this->rpc->$fn($map);
     }
@@ -80,7 +100,31 @@ class SoapImpl extends Api {
     }
 
 
+    function deleteExtraField($map) {
+        $fn = __FUNCTION__;
+        return $this->rpc->$fn($map);
+    }
+
+
+    function deleteList($map) {
+        $fn = __FUNCTION__;
+        return $this->rpc->$fn($map);
+    }
+
+
     function deleteSegment($map) {
+        $fn = __FUNCTION__;
+        return $this->rpc->$fn($map);
+    }
+
+
+    function deleteTag($map) {
+        $fn = __FUNCTION__;
+        return $this->rpc->$fn($map);
+    }
+
+
+    function detachTag($map) {
         $fn = __FUNCTION__;
         return $this->rpc->$fn($map);
     }
@@ -128,6 +172,12 @@ class SoapImpl extends Api {
     }
 
 
+    function getExtraFields($map) {
+        $fn = __FUNCTION__;
+        return $this->rpc->$fn($map);
+    }
+
+
     function getLists($map) {
         $fn = __FUNCTION__;
         return $this->rpc->$fn($map);
@@ -147,6 +197,12 @@ class SoapImpl extends Api {
 
 
     function getSenders($map) {
+        $fn = __FUNCTION__;
+        return $this->rpc->$fn($map);
+    }
+
+
+    function getTags($map) {
         $fn = __FUNCTION__;
         return $this->rpc->$fn($map);
     }
