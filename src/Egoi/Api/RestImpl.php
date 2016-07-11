@@ -61,7 +61,13 @@ class RestImpl extends Api {
         return $map;
     }
 
+
     function addExtraField($map) {
+        return $this->call(__FUNCTION__, $map);
+    }
+
+
+    function addSegment($map) {
         return $this->call(__FUNCTION__, $map);
     }
 
@@ -72,6 +78,16 @@ class RestImpl extends Api {
 
 
     function addSubscriberBulk($map) {
+        return $this->call(__FUNCTION__, $map);
+    }
+
+
+    function addTag($map) {
+        return $this->call(__FUNCTION__, $map);
+    }
+
+
+    function attachTag($map) {
         return $this->call(__FUNCTION__, $map);
     }
 
@@ -116,7 +132,27 @@ class RestImpl extends Api {
     }
 
 
+    function deleteExtraField($map) {
+        return $this->call(__FUNCTION__, $map);
+    }
+
+
+    function deleteList($map) {
+        return $this->call(__FUNCTION__, $map);
+    }
+
+
     function deleteSegment($map) {
+        return $this->call(__FUNCTION__, $map);
+    }
+
+
+    function deleteTag($map) {
+        return $this->call(__FUNCTION__, $map);
+    }
+
+
+    function detachTag($map) {
         return $this->call(__FUNCTION__, $map);
     }
 
@@ -156,6 +192,11 @@ class RestImpl extends Api {
     }
 
 
+    function getExtraFields($map) {
+        return $this->call(__FUNCTION__, $map);
+    }
+
+
     function getLists($map) {
         return $this->call(__FUNCTION__, $map);
     }
@@ -172,6 +213,11 @@ class RestImpl extends Api {
 
 
     function getSenders($map) {
+        return $this->call(__FUNCTION__, $map);
+    }
+
+
+    function getTags($map) {
         return $this->call(__FUNCTION__, $map);
     }
 
