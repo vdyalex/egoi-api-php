@@ -43,7 +43,6 @@ class SoapImpl extends Api {
         $fn = __FUNCTION__;
         return $this->rpc->$fn($map);
     }
-    }
 
 
     function attachTag($map) {
