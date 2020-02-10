@@ -1,4 +1,4 @@
-*Deprecated*
+**Deprecated**
 Please use https://github.com/E-goi/sdk-php instead
 
 
